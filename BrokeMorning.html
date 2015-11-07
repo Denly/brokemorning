@@ -1,0 +1,29 @@
+<head>
+  <title>BrokeMorning</title>
+</head>
+
+<body>
+  <div class="title">
+    <h1>Broke Morning</h1>
+  </div>
+  <div id="sortBy">
+    <div id="sortToggle" class="button">
+      <p>{{sortToggleIcon}}</p> <!-- Make images for this -->
+    </div>
+  </div>
+  {{#each alarms}}
+    {{> alarm}}
+  {{/each}}
+</body>
+
+<template name="alarm">
+  <div class="alarmDiv">
+    <div class="alarmImgDiv">
+      <img src="{{profileImage}}"/>
+    </div>
+    <div class="alarmInfoDiv">
+      <p>{{name}}</p>
+      <p>{{money}}</p>
+    </div>
+  </div>
+</template>
